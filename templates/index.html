@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Damilola ❤️</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<!-- =========================
+     OPENING SURPRISE
+     ========================= -->
+
+<div id="openingScreen">
+
+    <div class="opening-content">
+
+        <div class="opening-heart">
+            ❤️
+        </div>
+
+        <p class="opening-small">
+            Someone made something special for you...
+        </p>
+
+        <h2>
+            Damilola,
+        </h2>
+
+        <p class="opening-question">
+            Are you ready? 💌
+        </p>
+
+        <button onclick="openSurprise()">
+            Open My Surprise ❤️
+        </button>
+
+    </div>
+
+</div>
+<!-- =========================
+     MUSIC PLAYER
+     ========================= -->
+
+<div class="music-player" id="musicPlayer">
+
+    <div class="music-icon">🎵</div>
+
+    <div class="music-info">
+        <strong>Perfect ❤️</strong>
+        <small>Ed Sheeran</small>
+    </div>
+
+    <button id="musicButton" onclick="toggleMusic()">
+        ▶️
+    </button>
+
+</div>
+
+<audio id="loveSong" loop>
+    <source
+        src="{{ url_for('static', filename='music/Edd_Sheeran_-_Perfect_(mp3.pm).mp3') }}"
+        type="audio/mpeg">
+</audio>
+
+
+<!-- =========================
+     HOME
+     ========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-heart">
+            ❤️
+        </div>
+
+        <p class="small-text">
+            A little something I made just for you...
+        </p>
+
+        <h1>
+            Damilola,<br>
+            <span>This Is For You ❤️</span>
+        </h1>
+
+        <p class="message">
+            Out of all the people I could have met,
+            somehow I met you, Damilola.
+
+            Your smile caught my attention,
+            but your friendly heart is what made me
+            want to know you more.
+
+            So Pascal made something special...
+            just for you. ❤️
+        </p>
+
+        <button onclick="openLove()">
+            There's Something I Want To Tell You 💌
+        </button>
+
+        <div class="scroll-indicator">
+            Scroll down ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOVE LETTER
+     ========================= -->
+
+<section id="loveMessage">
+
+    <div class="letter">
+
+        <div class="big-heart">
+            ❤️
+        </div>
+
+        <h2>Damilola ❤️</h2>
+
+        <p>
+            I may not always have the perfect words,
+            but I want you to know that you are
+            incredibly special to me.
+        </p>
+
+        <p>
+            I could have simply told you this,
+            but I wanted to do something different.
+        </p>
+
+        <p>
+            There is something about your smile
+            that always manages to make my day better.
+            And your friendly nature makes being around
+            you feel so easy.
+        </p>
+
+        <p>
+            I don't know exactly where this story will go,
+            but I know that I would love the chance
+            to find out.
+        </p>
+
+        <p>
+            So I have one question for you...
+        </p>
+
+        <p class="signature">
+            Damilola, will you give Pascal a chance? ❤️
+        </p>
+
+        <button onclick="closeLove()">
+            I'll Think About It 😌❤️
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OUR STORY
+     ========================= -->
+
+<section class="story">
+
+    <p class="small-text">
+        A little story about us ❤️
+    </p>
+
+    <h2>
+        Our Story
+    </h2>
+
+    <div class="story-card">
+
+        <div class="story-heart">
+            ❤️
+        </div>
+
+        <h3>
+            The Beginning
+        </h3>
+
+        <p>
+            It all started with a simple meeting...
+            but sometimes the simplest moments
+            become the beginning of something beautiful.
+        </p>
+
+    </div>
+
+
+    <div class="story-card">
+
+        <div class="story-heart">
+            😊
+        </div>
+
+        <h3>
+            Your Smile
+        </h3>
+
+        <p>
+            Damilola, your smile is one of those little
+            things that can completely change my mood.
+            Somehow, you make an ordinary moment
+            feel special.
+        </p>
+
+    </div>
+
+
+    <div class="story-card">
+
+        <div class="story-heart">
+            💕
+        </div>
+
+        <h3>
+            And Then...
+        </h3>
+
+        <p>
+            Maybe this isn't the end of the story.
+            Maybe it's actually the beginning.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     OUR MEMORIES
+     ========================= -->
+
+<section class="memories">
+
+    <p class="small-text">
+        Little pieces of us ❤️
+    </p>
+
+    <h2>
+        Our Memories
+    </h2>
+
+    <p class="memory-intro">
+        Every picture tells a little story...
+        and these are some moments I want to keep
+        close to my heart.
+    </p>
+
+    <div class="memory-grid">
+
+
+        <div class="memory-card">
+
+            <div class="memory-photo">
+                <img
+                    src="{{ url_for('static', filename='images/photo1.jpg') }}"
+                    onclick="openPhotoViewer(this.src)"
+                    alt="Damilola memory 1">
+            </div>
+
+            <h3>
+                That Beautiful Smile ❤️
+            </h3>
+
+            <p>
+                A smile I could never get tired of seeing.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <div class="memory-photo">
+                <img
+                    src="{{ url_for('static', filename='images/photo2.jpg') }}"
+                    onclick="openPhotoViewer(this.src)"
+                    alt="Damilola memory 2">
+            </div>
+
+            <h3>
+                Beautiful You 💕
+            </h3>
+
+            <p>
+                Some moments deserve to be remembered forever.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <div class="memory-photo">
+                <img
+                    src="{{ url_for('static', filename='images/photo3.jpg') }}"
+                    onclick="openPhotoViewer(this.src)"
+                    alt="Damilola memory 3">
+            </div>
+
+            <h3>
+                A Special Moment ✨
+            </h3>
+
+            <p>
+                One of those moments that makes me smile.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <div class="memory-photo">
+                <img
+                    src="{{ url_for('static', filename='images/photo4.jpg') }}"
+                    onclick="openPhotoViewer(this.src)"
+                    alt="Damilola memory 4">
+            </div>
+
+            <h3>
+                Simply Damilola 🌹
+            </h3>
+
+            <p>
+                There is something about you that is different.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <div class="memory-photo">
+                <img
+                    src="{{ url_for('static', filename='images/photo5.jpg') }}"
+                    onclick="openPhotoViewer(this.src)"
+                    alt="Damilola memory 5">
+            </div>
+
+            <h3>
+                Your Energy 💗
+            </h3>
+
+            <p>
+                Your friendly nature makes you so easy to love.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <div class="memory-photo">
+                <img
+                    src="{{ url_for('static', filename='images/photo6.jpg') }}"
+                    onclick="openPhotoViewer(this.src)"
+                    alt="Damilola memory 6">
+            </div>
+
+            <h3>
+                A Moment To Remember 💫
+            </h3>
+
+            <p>
+                Maybe this will become one of our favorite memories.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <div class="memory-photo">
+                <img
+                    src="{{ url_for('static', filename='images/photo7.jpg') }}"
+                    onclick="openPhotoViewer(this.src)"
+                    alt="Damilola memory 7">
+            </div>
+
+            <h3>
+                Just You ❤️
+            </h3>
+
+            <p>
+                Beautiful without even trying.
+            </p>
+
+        </div>
+
+
+        <div class="memory-card">
+
+            <div class="memory-photo">
+                <img
+                    src="{{ url_for('static', filename='images/photo8.jpg') }}"
+                    onclick="openPhotoViewer(this.src)"
+                    alt="Damilola memory 8">
+            </div>
+
+            <h3>
+                To More Memories 🥂
+            </h3>
+
+            <p>
+                And hopefully, this is only the beginning
+                of our story.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTERACTIVE LOVE LETTER
+     ========================= -->
+
+<section class="interactive-letter-section">
+
+    <div
+        class="letter-envelope"
+        id="letterEnvelope">
+
+        <div class="envelope-icon">
+            💌
+        </div>
+
+        <h3>
+            A Letter For Damilola
+        </h3>
+
+        <p>
+            There is something I want you to read...
+        </p>
+
+        <button
+            id="letterButton"
+            onclick="openLoveLetter()">
+
+            Open My Letter ❤️
+
+        </button>
+
+    </div>
+
+
+    <div
+        id="interactiveLetter"
+        class="hidden-letter">
+
+        <div class="letter-title">
+            Dear Damilola ❤️
+        </div>
+
+        <div class="letter-body">
+
+Damilola, I don't know what tomorrow holds,
+but I'd really love to have you in my tomorrow.
+
+I'd love to spend my time with you,
+never to cause you pain or regret.
+
+Just give me the chance
+to love you with my whole heart.
+
+        </div>
+
+        <div class="letter-signature">
+            — Pascal ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL QUESTION
+     ========================= -->
+
+<section class="question">
+
+    <div class="question-container">
+
+        <div class="question-heart">
+            ❤️
+        </div>
+
+        <p class="small-text">
+            One last thing...
+        </p>
+
+        <h2>
+            Damilola,
+            will you give Pascal a chance?
+        </h2>
+
+        <div class="question-buttons">
+
+            <button onclick="sayYes()">
+                YES ❤️
+            </button>
+
+            <button onclick="sayMaybe()">
+                LET ME THINK 😌
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PHOTO VIEWER
+     ========================= -->
+
+<div id="photoViewer">
+
+    <button
+        id="closePhoto"
+        onclick="closePhotoViewer()">
+
+        ×
+
+    </button>
+
+    <img
+        id="viewerImage"
+        src=""
+        alt="Memory">
+
+    <div id="photoHint">
+        Tap × to close ❤️
+    </div>
+
+</div>
+
+<!-- =========================
+     FINAL ROMANTIC ENDING
+     ========================= -->
+
+<section class="final-ending">
+
+    <div class="final-heart">
+        ❤️
+    </div>
+
+    <p class="small-text">
+        Whatever happens...
+    </p>
+
+    <h2>
+        I'm Glad I Met You, Damilola.
+    </h2>
+
+    <p class="final-message">
+        Maybe this is just a little website,
+        but every word here came from my heart.
+
+        Thank you for being someone
+        worth creating something this special for.
+
+        And if our story is only beginning,
+        I hope we create many more beautiful
+        memories together. ❤️
+    </p>
+
+    <div class="final-signature">
+        With love,<br>
+        <strong>Pascal ❤️</strong>
+    </div>
+
+    <div class="final-roses">
+        🌹 ❤️ 🌹
+    </div>
+
+</section>
+<!-- =========================
+     FOOTER
+     ========================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-heart">
+        ❤️
+    </div>
+
+    <p>
+        Made with love for Damilola
+    </p>
+
+    <span>
+        — Pascal ❤️
+    </span>
+
+</footer>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+          </html>
