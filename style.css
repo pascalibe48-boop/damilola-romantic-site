@@ -1,0 +1,1599 @@
+/* =========================================
+   DAMILOLA ROMANTIC WEBSITE
+   CLEAN MASTER DESIGN
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #3b0827 0%,
+            #15020f 40%,
+            #070107 100%
+        );
+
+    color: white;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   GENERAL
+   ========================================= */
+
+section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding:
+        90px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   HOME
+   ========================================= */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(120, 15, 70, 0.55),
+            rgba(9, 0, 13, 0.95) 70%
+        );
+}
+
+.hero-content {
+    width: 100%;
+
+    max-width: 650px;
+
+    animation:
+        homeAppear 1s ease;
+}
+
+.hero-heart,
+.heart {
+    font-size: 70px;
+
+    margin-bottom: 15px;
+
+    animation:
+        heartbeat 1.3s infinite;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(255, 70, 130, 0.55)
+        );
+}
+
+.small-text {
+    margin-top: 15px;
+
+    color: #ff9cbd;
+
+    opacity: 0.8;
+
+    letter-spacing: 2px;
+
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 50px;
+
+    margin: 25px 0;
+
+    line-height: 1.2;
+}
+
+h1 span {
+    color: #ff76a9;
+
+    text-shadow:
+        0 0 20px
+        rgba(255, 90, 150, 0.3);
+}
+
+.message {
+    max-width: 520px;
+
+    margin: auto;
+
+    font-size: 17px;
+
+    line-height: 1.9;
+
+    white-space: pre-line;
+
+    opacity: 0.82;
+}
+
+.scroll-indicator {
+    margin-top: 45px;
+
+    color: #ff9cbd;
+
+    opacity: 0.6;
+
+    font-size: 13px;
+
+    animation:
+        scrollFloat 1.8s infinite;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+button {
+    margin-top: 30px;
+
+    padding:
+        14px 28px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #d92b70
+        );
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px
+        rgba(255, 61, 127, 0.3);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(255, 61, 127, 0.45);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================================
+   FIRST LOVE MESSAGE
+   ========================================= */
+
+#loveMessage {
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 30px 20px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #3d0929,
+            #12000f 75%
+        );
+}
+
+.letter {
+    width: 100%;
+
+    max-width: 620px;
+
+    padding:
+        45px 30px;
+
+    text-align: center;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255,255,255,0.055);
+
+    border:
+        1px solid
+        rgba(255, 145, 185, 0.2);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.45);
+
+    backdrop-filter:
+        blur(12px);
+}
+
+.big-heart {
+    font-size: 60px;
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+.letter h2 {
+    color: #ff76a9;
+
+    font-size: 35px;
+
+    margin:
+        20px 0;
+}
+
+.letter p {
+    line-height: 1.9;
+
+    margin:
+        15px 0;
+
+    opacity: 0.85;
+}
+
+.signature {
+    color: #ff9abb;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   OUR STORY
+   ========================================= */
+
+.story {
+    background:
+        linear-gradient(
+            180deg,
+            #10000d,
+            #190313,
+            #0b0209
+        );
+}
+
+.story > h2,
+.memories > h2 {
+    color: #ff9cbd;
+
+    font-size: 40px;
+
+    margin:
+        15px 0 35px;
+}
+
+.story-card {
+    width: 100%;
+
+    max-width: 600px;
+
+    margin:
+        12px 0;
+
+    padding:
+        28px 25px;
+
+    border-radius: 22px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    border:
+        1px solid
+        rgba(255,140,180,0.15);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.25);
+}
+
+.story-heart {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+.story-card h3 {
+    color: #ff9cbd;
+
+    font-size: 23px;
+
+    margin-bottom: 10px;
+}
+
+.story-card p {
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   MEMORIES
+   ========================================= */
+
+.memories {
+    background:
+        radial-gradient(
+            circle at top,
+            rgba(90, 10, 50, 0.35),
+            #09000d 70%
+        );
+}
+
+.memory-intro {
+    max-width: 600px;
+
+    opacity: 0.7;
+
+    margin-bottom: 35px;
+}
+
+.memory-grid {
+    width: 100%;
+
+    max-width: 1050px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: 22px;
+}
+
+.memory-card {
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    padding-bottom: 20px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    border:
+        1px solid
+        rgba(255,140,180,0.14);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.3);
+
+    transition:
+        transform 0.3s ease;
+}
+
+.memory-card:hover {
+    transform:
+        translateY(-5px);
+}
+
+.memory-photo {
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background:
+        #16030f;
+}
+
+.memory-photo img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.memory-photo img:hover {
+    transform:
+        scale(1.04);
+}
+
+.memory-card h3 {
+    color: #ff9cbd;
+
+    font-size: 19px;
+
+    margin:
+        18px 15px 8px;
+}
+
+.memory-card p {
+    margin:
+        0 15px;
+
+    opacity: 0.7;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   INTERACTIVE LETTER
+   ========================================= */
+
+.interactive-letter-section {
+    background:
+        radial-gradient(
+            circle at center,
+            #3c0928,
+            #0b0209 75%
+        );
+}
+
+.letter-envelope {
+    max-width: 500px;
+
+    text-align: center;
+}
+
+.envelope-icon {
+    font-size: 80px;
+
+    margin-bottom: 15px;
+
+    animation:
+        envelopeFloat 2s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 0 18px
+            rgba(255,80,140,0.4)
+        );
+}
+
+.letter-envelope h3 {
+    color: #ff9cbd;
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+}
+
+.letter-envelope p {
+    opacity: 0.7;
+}
+
+.hidden-letter {
+    display: none;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    padding:
+        35px 25px;
+
+    border-radius: 25px;
+
+    background:
+        rgba(255,255,255,0.055);
+
+    border:
+        1px solid
+        rgba(255,140,180,0.2);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,0.4);
+
+    animation:
+        letterAppear 0.7s ease;
+}
+
+.hidden-letter.show-letter {
+    display: block;
+}
+
+.letter-title {
+    color: #ff9cbd;
+
+    font-size: 27px;
+
+    margin-bottom: 20px;
+}
+
+.letter-body {
+    white-space: pre-line;
+
+    line-height: 2;
+
+    opacity: 0.85;
+}
+
+.letter-signature {
+    margin-top: 25px;
+
+    color: #ff9cbd;
+
+    font-size: 21px;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   QUESTION
+   ========================================= */
+
+.question {
+    background:
+        radial-gradient(
+            circle at center,
+            #4a092e,
+            #080208 75%
+        );
+}
+
+.question-container {
+    width: 100%;
+
+    max-width: 650px;
+
+    padding:
+        40px 25px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(255,255,255,0.045);
+
+    border:
+        1px solid
+        rgba(255,140,180,0.18);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.45);
+}
+
+.question-heart {
+    font-size: 65px;
+
+    animation:
+        heartbeat 1.3s infinite;
+}
+
+.question h2 {
+    color: #ff9cbd;
+
+    font-size: 38px;
+
+    line-height: 1.35;
+
+    margin:
+        20px 0;
+}
+
+.question-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================
+   PHOTO VIEWER
+   ========================================= */
+
+#photoViewer {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 20px;
+
+    background:
+        rgba(5,0,5,0.96);
+
+    backdrop-filter:
+        blur(15px);
+
+    z-index: 1000000;
+}
+
+#viewerImage {
+    max-width: 94%;
+
+    max-height: 78vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 70px
+        rgba(0,0,0,0.7);
+
+    animation:
+        photoAppear 0.35s ease;
+}
+
+#closePhoto {
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    width: 45px;
+
+    height: 45px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border-radius: 50%;
+
+    font-size: 28px;
+
+    line-height: 1;
+}
+
+#photoHint {
+    margin-top: 18px;
+
+    color: #ffb1cc;
+
+    font-size: 13px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   MUSIC PLAYER
+   ========================================= */
+
+.music-player,
+#musicPlayer {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 18px;
+
+    transform:
+        translateX(-50%);
+
+    width: 290px;
+
+    min-height: 68px;
+
+    padding:
+        10px 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(45,10,30,0.97),
+            rgba(18,4,14,0.97)
+        );
+
+    border:
+        1px solid
+        rgba(255,155,195,0.25);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0,0,0,0.5);
+
+    backdrop-filter:
+        blur(18px);
+
+    z-index: 999999;
+}
+
+.music-icon {
+    width: 45px;
+
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #ff9bc0 0 18%,
+            #ff4f91 19% 42%,
+            #8d214f 43% 100%
+        );
+
+    font-size: 0;
+
+    animation:
+        musicDisc 4s linear infinite;
+
+    animation-play-state:
+        paused;
+}
+
+.music-info {
+    flex: 1;
+
+    min-width: 0;
+
+    text-align: left;
+}
+
+.music-info strong {
+    display: block;
+
+    color: #ffd0df;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.music-info small {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #ff91b8;
+
+    font-size: 11px;
+
+    opacity: 0.75;
+}
+
+.music-player button,
+#musicPlayer button {
+    width: 42px;
+
+    height: 42px;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    margin: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   ANIMATIONS
+   ========================================= */
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.18);
+    }
+}
+
+@keyframes homeAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes scrollFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(8px);
+    }
+}
+
+@keyframes envelopeFloat {
+
+    0%, 100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+}
+
+@keyframes letterAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes photoAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+@keyframes musicDisc {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    section {
+        padding:
+            75px 16px;
+    }
+
+    h1 {
+        font-size: 43px;
+    }
+
+    .hero-heart,
+    .heart {
+        font-size: 58px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    .story > h2,
+    .memories > h2 {
+        font-size: 34px;
+    }
+
+    .memory-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .memory-photo {
+        height: 330px;
+    }
+
+    .letter {
+        padding:
+            35px 22px;
+    }
+
+    .question h2 {
+        font-size: 30px;
+    }
+
+    .question-buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .question-buttons button {
+        width: 220px;
+    }
+
+    .music-player,
+    #musicPlayer {
+        width: 275px;
+
+        bottom: 15px;
+    }
+
+    #viewerImage {
+        max-width: 96%;
+
+        max-height: 75vh;
+    }
+}
+/* =========================================
+   ANIMATED LOVE LETTER
+   ========================================= */
+
+.letter-envelope {
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s ease;
+}
+
+.letter-envelope.opening {
+    opacity: 0;
+    transform: scale(0.85) translateY(-20px);
+    pointer-events: none;
+}
+
+.hidden-letter {
+    transform:
+        translateY(35px)
+        scale(0.94);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.hidden-letter.show-letter {
+    display: block;
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    animation:
+        letterOpen 0.9s ease forwards;
+}
+
+@keyframes letterOpen {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(40px)
+            scale(0.9)
+            rotateX(8deg);
+    }
+
+    60% {
+        opacity: 1;
+
+        transform:
+            translateY(-5px)
+            scale(1.02)
+            rotateX(0);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.letter-title {
+    animation:
+        letterText 1s ease 0.3s both;
+}
+
+.letter-body {
+    animation:
+        letterText 1s ease 0.55s both;
+}
+
+.letter-signature {
+    animation:
+        letterText 1s ease 0.8s both;
+}
+
+@keyframes letterText {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+/* =========================================
+   YES MOMENT
+   ========================================= */
+
+.yes-result {
+    animation: yesReveal 1s ease forwards;
+}
+
+.yes-result .yes-heart {
+    font-size: 80px;
+    margin-bottom: 20px;
+    animation: yesHeartbeat 1.2s infinite;
+    filter: drop-shadow(
+        0 0 25px
+        rgba(255, 80, 150, 0.6)
+    );
+}
+
+.yes-result h2 {
+    color: #ff9cbd;
+    font-size: 42px;
+    margin-bottom: 18px;
+}
+
+.yes-result p {
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.9;
+    opacity: 0.85;
+}
+
+.yes-hearts {
+    margin-top: 25px;
+    font-size: 30px;
+    letter-spacing: 8px;
+}
+
+@keyframes yesReveal {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes yesHeartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+/* =========================================
+   MAYBE RESPONSE
+   ========================================= */
+
+.maybe-result {
+    animation: yesReveal 0.8s ease forwards;
+}
+
+.maybe-result .maybe-heart {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+/* =========================================
+   FLOATING HEARTS & SPARKLES
+   ========================================= */
+
+.floating-heart {
+    position: fixed;
+
+    bottom: -40px;
+
+    font-size: 20px;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    opacity: 0;
+
+    animation:
+        floatHeart linear forwards;
+}
+
+.sparkle {
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+    color: #ffd6e5;
+
+    font-size: 14px;
+
+    opacity: 0;
+
+    animation:
+        sparkleFloat ease-in-out forwards;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            translateX(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.65;
+    }
+
+    50% {
+        transform:
+            translateY(-50vh)
+            translateX(25px)
+            rotate(15deg);
+
+        opacity: 0.55;
+    }
+
+    90% {
+        opacity: 0.25;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            translateX(-25px)
+            rotate(-15deg);
+
+        opacity: 0;
+    }
+}
+
+@keyframes sparkleFloat {
+
+    0% {
+        transform:
+            scale(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    25% {
+        transform:
+            scale(1)
+            rotate(90deg);
+
+        opacity: 0.8;
+    }
+
+    50% {
+        transform:
+            scale(0.7)
+            rotate(180deg);
+
+        opacity: 0.4;
+    }
+
+    75% {
+        transform:
+            scale(1.1)
+            rotate(270deg);
+
+        opacity: 0.8;
+    }
+
+    100% {
+        transform:
+            scale(0)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+/* =========================================
+   FINAL ROMANTIC ENDING
+   ========================================= */
+
+.final-ending {
+    min-height: 80vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #450a2e,
+            #0a0108 75%
+        );
+}
+
+.final-heart {
+    font-size: 75px;
+
+    margin-bottom: 15px;
+
+    animation:
+        heartbeat 1.4s infinite;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(255,80,150,0.55)
+        );
+}
+
+.final-ending h2 {
+    max-width: 700px;
+
+    color: #ff9cbd;
+
+    font-size: 42px;
+
+    line-height: 1.3;
+
+    margin:
+        20px 0;
+}
+
+.final-message {
+    max-width: 600px;
+
+    white-space: pre-line;
+
+    line-height: 2;
+
+    opacity: 0.8;
+
+    font-size: 16px;
+}
+
+.final-signature {
+    margin-top: 30px;
+
+    color: #ffb0c9;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.final-signature strong {
+    font-size: 24px;
+
+    color: #ff76a9;
+}
+
+.final-roses {
+    margin-top: 30px;
+
+    font-size: 30px;
+
+    letter-spacing: 8px;
+}
+
+
+@media (max-width: 600px) {
+
+    .final-ending h2 {
+        font-size: 32px;
+    }
+
+    .final-message {
+        font-size: 15px;
+    }
+
+    .final-heart {
+        font-size: 60px;
+    }
+}
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    width: 100%;
+
+    padding:
+        45px 20px 100px;
+
+    text-align: center;
+
+    background:
+        #060106;
+
+    border-top:
+        1px solid
+        rgba(255, 140, 180, 0.1);
+}
+
+.footer-heart {
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+    animation:
+        heartbeat 1.5s infinite;
+}
+
+.site-footer p {
+    color: #ffabc5;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.site-footer span {
+    color: rgba(255,255,255,0.55);
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+/* =========================================
+   OPENING SURPRISE
+   ========================================= */
+
+#openingScreen {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4a092f,
+            #12000f 55%,
+            #050005 100%
+        );
+
+    transition:
+        opacity 0.9s ease,
+        visibility 0.9s ease;
+}
+
+#openingScreen.hide {
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+.opening-content {
+    width: 100%;
+
+    max-width: 500px;
+
+    animation:
+        openingAppear 1.2s ease;
+}
+
+.opening-heart {
+    font-size: 80px;
+
+    margin-bottom: 20px;
+
+    animation:
+        heartbeat 1.3s infinite;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(255,80,150,0.6)
+        );
+}
+
+.opening-small {
+    color: #ffabc7;
+
+    letter-spacing: 2px;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+.opening-content h2 {
+    color: #ff9cbd;
+
+    font-size: 48px;
+
+    margin-bottom: 10px;
+}
+
+.opening-question {
+    font-size: 21px;
+
+    opacity: 0.85;
+}
+
+.opening-content button {
+    margin-top: 35px;
+}
+
+@keyframes openingAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .opening-heart {
+        font-size: 65px;
+    }
+
+    .opening-content h2 {
+        font-size: 40px;
+    }
+}
